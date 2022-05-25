@@ -11,6 +11,8 @@ Uruchomienie kontenera
 Uzyskanie informacji z kontenera
 
     docker logs time_server 
+![time_server_log](time_server_log.png)
+
 Sprawdzenie ilość warstw
 
     docker history server_mr
