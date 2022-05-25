@@ -12,3 +12,4 @@ Sprawdzenie ilość warstw
 
     docker history server_mr
 
+![time_server](time_server.png)
