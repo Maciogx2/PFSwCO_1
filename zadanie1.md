@@ -1,7 +1,7 @@
 # Programowanie full stack w chmurze obliczeniowej
 
-![Docker Hub](https://hub.docker.com/repository/docker/maciogx2/pfswco_1)
-![GitHub Registry](https://ghcr.io/maciogx2/pfswco_1)
+[Docker Hub](https://hub.docker.com/repository/docker/maciogx2/pfswco_1)
+[GitHub Registry](https://ghcr.io/maciogx2/pfswco_1)
 
 
 ### Rozmiar na maszynie 38.8 kB
