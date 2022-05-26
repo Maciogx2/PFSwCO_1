@@ -2,6 +2,9 @@
 
 [Docker Hub](https://hub.docker.com/repository/docker/maciogx2/pfswco_1)
 
+### Rozmiar na maszynie 38.8 kB
+![size](size.png)
+
 ### Budowanie obrazu
 
     docker build -t server_mr <PATH>
