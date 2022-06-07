@@ -10,6 +10,19 @@ jobs:
 
     steps:
 
+      - name: Get Timestamp
+        uses: gerred/actions/current-time@master
+        id: current-time
+
+      - name: Run String Replace
+        uses: frabert/replace-string-action@master
+        id: format-time
+        with:
+          pattern: '[:\.]+'
+          string: "${{ steps.current-time.outputs.time }}"
+          replace-with: '-'
+          flags: 'g'
+
       - name: Checkout code
         uses: actions/checkout@v2
       
@@ -54,6 +67,21 @@ jobs:
           tags: |
             maciogx2/pfswco_1
             ghcr.io/maciogx2/pfswco_1:latest
+
+      - name: Generate deployment package
+        run: zip -r deploy.zip . -x '*.git*'
+
+      - name: Deploy to EB
+        uses: einaregilsson/beanstalk-deploy@v20
+        with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
+          application_name: pfswco_1
+          environment_name: Pfswco1-env
+          existing_bucket_name: elasticbeanstalk-us-east-1-XXXXXXXXXX
+          version_label: "docker-app-${{ steps.format-time.outputs.replaced }}"
+          region: us-east-1
+          deployment_package: deploy.zip
             
       - name: Move cache
         run: |
