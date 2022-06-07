@@ -4,6 +4,8 @@
 
 [GitHub Registry](https://ghcr.io/maciogx2/pfswco_1)
 
+[Elastic Beanstalk](http://pfswco1-env.eba-9mrm3mek.us-east-1.elasticbeanstalk.com/)
+
 
 ### Rozmiar na maszynie 38.8 kB
 ![size](size.png)
