@@ -78,7 +78,7 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: pfswco_1
           environment_name: Pfswco1-env
-          existing_bucket_name: elasticbeanstalk-us-east-1-XXXXXXXXXX
+          existing_bucket_name: elasticbeanstalk-us-east-1-919624098143
           version_label: "docker-app-${{ steps.format-time.outputs.replaced }}"
           region: us-east-1
           deployment_package: deploy.zip
